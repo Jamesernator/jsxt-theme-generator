@@ -1,0 +1,104 @@
+{
+	"name": "JSXT Light",
+	"$schema": "vscode://schemas/color-theme",
+	"type": "light",
+	"colors": {
+		"editor.background": "#f5f5f5",
+		"editor.foreground": "#333333",
+        "list.activeSelectionIconForeground": "#fff"
+	},
+	"semanticHighlighting": true,
+	"semanticTokenColors": {
+		"keyword": {
+			"foreground": "#ff0000",
+			"underline": true
+		}
+	},
+	"//semanticTokenColors": {
+		"class": {
+			"foreground": "#00AAAA",
+			"bold": true
+		},
+		"class.declaration": {
+			"foreground": "#00AAAA",
+			"bold": true,
+			"underline": true
+		},
+		"comment": {
+			"foreground": "#AAAAAA"
+		},
+		"enum": {
+			"foreground": "#00AAAA",
+			"bold": true
+		},
+		"enumMember": {
+			"foreground": "#ff0000"
+		},
+		"event": {
+			"foreground": "#00FFFF"
+		},
+		"function": {
+			"foreground": "#00AAAA"
+		},
+		"function.declaration": {
+			"foreground": "#00AAAA",
+			"underline": true
+		},
+		"interface": {
+			"foreground": "#00AAAA",
+			"bold": true
+		},
+		"keyword": {
+			"foreground": "#00AAFF",
+			"bold": true
+		},
+		"label": {
+			"foreground": "#FF7700"
+		},
+		"macro": {
+			"foreground": "#00AAAA"
+		},
+		"method": {
+			"foreground": "#FF7700"
+		},
+		"namespace": {
+			"foreground": "#00AAAA"
+		},
+		"number": {
+			"foreground": "#00AAFF"
+		},
+		"operator": {
+			"foreground": "#00AA00"
+		},
+		"parameter": {
+			"foreground": "#FF0000"
+		},
+		"property": {
+			"foreground": "#FF0000"
+		},
+		"regexp": {
+			"foreground": "#FF0000"
+		},
+		"string": {
+			"foreground": "#FF00FF"
+		},
+		"struct": {
+			"foreground": "#FF0000"
+		},
+		"tomlArrayKey": {
+			"foreground": "#FF0000"
+		},
+		"tomlTableKey": {
+			"foreground": "#FF0000"
+		},
+		"type": {
+			"foreground": "#FF0000"
+		},
+		"typeParameter": {
+			"foreground": "#FF0000"
+		},
+		"variable": {
+			"foreground": "#FF0000"
+		}
+	}
+}

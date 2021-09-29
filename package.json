@@ -1,0 +1,26 @@
+{
+    "name": "jsxt-theme",
+    "displayName": "jsxt-theme",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "JSXT",
+                "uiTheme": "vs-dark",
+                "path": "./themes/JSXT-dark-theme.json"
+            },
+            {
+                "label": "JSXT",
+                "uiTheme": "vs",
+                "path": "./themes/JSXT-light-theme.json"
+            }
+        ]
+    }
+}

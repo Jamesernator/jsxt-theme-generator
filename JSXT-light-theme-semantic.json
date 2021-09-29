@@ -1,0 +1,10 @@
+
+{
+    "$schema": "vscode://schemas/color-theme",
+    "semanticTokenColors": {
+        "class": {
+            "bold": true,
+            "foreground": "#00AAAA"
+        }
+    }
+}
