@@ -1,0 +1,26 @@
+{
+    "include": ["./**/*.mjs", "./**/*.d.ts"],
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "NodeNext",
+        "sourceMap": true,
+        "downlevelIteration": true,
+
+        "strict": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "alwaysStrict": true,
+
+        "allowSyntheticDefaultImports": true,
+        "useDefineForClassFields": true,
+        "importsNotUsedAsValues": "error",
+        "noUncheckedIndexedAccess": true,
+        "allowJs": true,
+        "checkJs": true,
+        "noEmit": true,
+        "resolveJsonModule": true
+    },
+    "ts-node": {
+        "transpileOnly": true
+    }
+}

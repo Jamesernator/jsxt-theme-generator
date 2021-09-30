@@ -1,10 +1,132 @@
 
 {
-    "$schema": "vscode://schemas/color-theme",
+	"$schema": "vscode://schemas/color-theme",
+	"name": "JSXT Light",
+	"type": "light",
+	"colors": {
+		"editor.background": "#f5f5f5",
+		"editor.foreground": "#333333",
+        "list.activeSelectionIconForeground": "#fff"
+	},
+	"semanticHighlighting": true,
     "semanticTokenColors": {
         "class": {
-            "bold": true,
-            "foreground": "#00AAAA"
-        }
+			"foreground": "#008888",
+			"bold": true
+		},
+		"class.declaration": {
+			"foreground": "#008888",
+			"bold": true,
+			"underline": true
+		},
+        "comment": {
+			"foreground": "#AAAAAA"
+		},
+		"enum": {
+			"foreground": "#FF00AA",
+			"bold": true
+		},
+		"enumMember": {
+			"foreground": "#00AA00"
+		},
+		"event": {
+			"foreground": "#00FFFF"
+		},
+		"function": {
+			"foreground": "#00AAAA"
+		},
+		"function.declaration": {
+			"foreground": "#00AAAA",
+			"underline": true
+		},
+		"interface": {
+			"foreground": "#FF00AA",
+			"bold": true
+		},
+		"keyword": {
+			"foreground": "#00AAFF",
+			"bold": true,
+			"italic": true
+		},
+		"keyword.storage": {
+			"foreground": "#AA00FF",
+			"bold": true
+		},
+		"label": {
+			"foreground": "#FF0000"
+		},
+		"macro": {
+			"foreground": "#00AAAA"
+		},
+		"method": {
+			"foreground": "#00AAAA"
+		},
+		"namespace": {
+			"foreground": "#00AAAA",
+			"bold": true
+		},
+		"namespace.declaration": {
+			"foreground": "#00AAAA",
+			"bold": true,
+			"underline": true
+		},
+		"number": {
+			"foreground": "#0000CC"
+		},
+		"operator": {
+			"foreground": "#FF9900",
+			"bold": true
+		},
+		"parameter": {
+			"foreground": "#00AA00"
+		},
+		"property": {
+			"foreground": "#AAAA00"
+		},
+		"regexp": {
+			"foreground": "#AA0099"
+		},
+		"regexp.characterClass": {
+			"foreground": "#00AAFF"
+		},
+		"string": {
+			"foreground": "#FF00FF",
+			"bold": true
+		},
+		"string.escape": {
+			"foreground": "#00AAFF",
+			"bold": true
+		},
+		"string.terminator": {
+			"foreground": "#995555"
+		},
+		"struct": {
+			"foreground": "#FF0000"
+		},
+		"tomlArrayKey": {
+			"foreground": "#FF0000"
+		},
+		"tomlTableKey": {
+			"foreground": "#FF0000"
+		},
+		"type": {
+			"foreground": "#FF00AA",
+			"bold": true
+		},
+		"type.primitive": {
+			"foreground": "#55CCFF",
+			"italic": true
+		},
+		"typeParameter": {
+			"foreground": "#5555FF"
+		},
+		"variable": {
+			"foreground": "#00AA00"
+		},
+		"variable.defaultLibrary": {
+			"foreground": "#00AA00",
+			"italic": true,
+			"bold": true
+		}
     }
 }
