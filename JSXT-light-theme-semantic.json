@@ -1,132 +1,161 @@
-
 {
-	"$schema": "vscode://schemas/color-theme",
-	"name": "JSXT Light",
-	"type": "light",
-	"colors": {
-		"editor.background": "#f5f5f5",
-		"editor.foreground": "#333333",
-        "list.activeSelectionIconForeground": "#fff"
-	},
-	"semanticHighlighting": true,
+    "$schema": "vscode://schemas/color-theme",
+    "name": "JSXT Light",
+    "type": "light",
+    "colors": {
+        "focusBorder": "#888",
+        "foreground": "#444",
+        "widget.shadow": "#555",
+        "selection.background": "#0AF",
+        "activityBar.activeBackground": "#FFF",
+        "activityBar.background": "#CCC",
+        "activityBar.foreground": "#000",
+        "activityBar.activeBorder": "#0AF",
+        "editor.background": "#EEE",
+        "editor.foreground": "#222",
+        "list.activeSelectionBackground": "#0AF",
+        "statusBar.background": "#0AF",
+        "statusBar.foreground": "#FFF",
+        "terminal.background": "#EEE",
+        "terminal.foreground": "#333",
+        "terminalCursor.background": "#FFF",
+        "terminalCursor.foreground": "#AAA",
+        "terminal.ansiBlack": "#444",
+        "terminal.ansiBlue": "#00F",
+        "terminal.ansiCyan": "#0AA",
+        "terminal.ansiGreen": "#0A0",
+        "terminal.ansiMagenta": "#F0F",
+        "terminal.ansiRed": "#C00",
+        "terminal.ansiWhite": "#ffe9e9",
+        "terminal.ansiYellow": "#BB0",
+        "terminal.ansiBrightBlack": "#777",
+        "terminal.ansiBrightBlue": "#0AF",
+        "terminal.ansiBrightCyan": "#0CC",
+        "terminal.ansiBrightGreen": "#0C3",
+        "terminal.ansiBrightMagenta": "#C0C",
+        "terminal.ansiBrightRed": "#F00",
+        "terminal.ansiBrightWhite": "#FFF",
+        "terminal.ansiBrightYellow": "#CC0"
+    },
+    "semanticHighlighting": true,
     "semanticTokenColors": {
         "class": {
-			"foreground": "#008888",
-			"bold": true
-		},
-		"class.declaration": {
-			"foreground": "#008888",
-			"bold": true,
-			"underline": true
-		},
+            "foreground": "#088",
+            "bold": true
+        },
+        "class.declaration": {
+            "foreground": "#088",
+            "bold": true,
+            "underline": true
+        },
         "comment": {
-			"foreground": "#AAAAAA"
-		},
-		"enum": {
-			"foreground": "#FF00AA",
-			"bold": true
-		},
-		"enumMember": {
-			"foreground": "#00AA00"
-		},
-		"event": {
-			"foreground": "#00FFFF"
-		},
-		"function": {
-			"foreground": "#00AAAA"
-		},
-		"function.declaration": {
-			"foreground": "#00AAAA",
-			"underline": true
-		},
-		"interface": {
-			"foreground": "#FF00AA",
-			"bold": true
-		},
-		"keyword": {
-			"foreground": "#00AAFF",
-			"bold": true,
-			"italic": true
-		},
-		"keyword.storage": {
-			"foreground": "#AA00FF",
-			"bold": true
-		},
-		"label": {
-			"foreground": "#FF0000"
-		},
-		"macro": {
-			"foreground": "#00AAAA"
-		},
-		"method": {
-			"foreground": "#00AAAA"
-		},
-		"namespace": {
-			"foreground": "#00AAAA",
-			"bold": true
-		},
-		"namespace.declaration": {
-			"foreground": "#00AAAA",
-			"bold": true,
-			"underline": true
-		},
-		"number": {
-			"foreground": "#0000CC"
-		},
-		"operator": {
-			"foreground": "#FF9900",
-			"bold": true
-		},
-		"parameter": {
-			"foreground": "#00AA00"
-		},
-		"property": {
-			"foreground": "#AAAA00"
-		},
-		"regexp": {
-			"foreground": "#AA0099"
-		},
-		"regexp.characterClass": {
-			"foreground": "#00AAFF"
-		},
-		"string": {
-			"foreground": "#FF00FF",
-			"bold": true
-		},
-		"string.escape": {
-			"foreground": "#00AAFF",
-			"bold": true
-		},
-		"string.terminator": {
-			"foreground": "#995555"
-		},
-		"struct": {
-			"foreground": "#FF0000"
-		},
-		"tomlArrayKey": {
-			"foreground": "#FF0000"
-		},
-		"tomlTableKey": {
-			"foreground": "#FF0000"
-		},
-		"type": {
-			"foreground": "#FF00AA",
-			"bold": true
-		},
-		"type.primitive": {
-			"foreground": "#55CCFF",
-			"italic": true
-		},
-		"typeParameter": {
-			"foreground": "#5555FF"
-		},
-		"variable": {
-			"foreground": "#00AA00"
-		},
-		"variable.defaultLibrary": {
-			"foreground": "#00AA00",
-			"italic": true,
-			"bold": true
-		}
+            "foreground": "#AAA"
+        },
+        "enum": {
+            "foreground": "#F0A",
+            "bold": true
+        },
+        "enumMember": {
+            "foreground": "#0A0"
+        },
+        "event": {
+            "foreground": "#0FF"
+        },
+        "function": {
+            "foreground": "#0AA"
+        },
+        "function.declaration": {
+            "foreground": "#0AA",
+            "underline": true
+        },
+        "interface": {
+            "foreground": "#F0A",
+            "bold": true
+        },
+        "keyword": {
+            "foreground": "#0AF",
+            "bold": true,
+            "italic": true
+        },
+        "keyword.storage": {
+            "foreground": "#A0F",
+            "bold": true
+        },
+        "label": {
+            "foreground": "#F00"
+        },
+        "macro": {
+            "foreground": "#0AA"
+        },
+        "method": {
+            "foreground": "#0AA"
+        },
+        "namespace": {
+            "foreground": "#0AA",
+            "bold": true
+        },
+        "namespace.declaration": {
+            "foreground": "#0AA",
+            "bold": true,
+            "underline": true
+        },
+        "number": {
+            "foreground": "#00C"
+        },
+        "operator": {
+            "foreground": "#F90",
+            "bold": true
+        },
+        "parameter": {
+            "foreground": "#0A0"
+        },
+        "property": {
+            "foreground": "#AA0"
+        },
+        "regexp": {
+            "foreground": "#A09"
+        },
+        "regexp.characterClass": {
+            "foreground": "#0AF"
+        },
+        "string": {
+            "foreground": "#F0F",
+            "bold": true
+        },
+        "string.escape": {
+            "foreground": "#0AF",
+            "bold": true
+        },
+        "string.terminator": {
+            "foreground": "#955"
+        },
+        "struct": {
+            "foreground": "#F00"
+        },
+        "tomlArrayKey": {
+            "foreground": "#F00"
+        },
+        "tomlTableKey": {
+            "foreground": "#F00"
+        },
+        "type": {
+            "foreground": "#F0A",
+            "bold": true
+        },
+        "type.primitive": {
+            "foreground": "#A00",
+            "italic": true
+        },
+        "typeParameter": {
+            "foreground": "#55F"
+        },
+        "variable": {
+            "foreground": "#0A0"
+        },
+        "variable.defaultLibrary": {
+            "foreground": "#0A0",
+            "italic": true,
+            "bold": true
+        }
     }
 }
