@@ -191,9 +191,7 @@
             }
         },
         {
-            "scope": [
-                "entity.name.function"
-            ],
+            "scope": [],
             "settings": {
                 "foreground": "#00AAAA",
                 "fontStyle": "underline"

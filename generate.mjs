@@ -22,9 +22,7 @@ const tokenMap = {
     function: [
         "entity.name.function",
     ],
-    "function.declaration": [
-        "entity.name.function",
-    ],
+    "function.declaration": [],
     interface: [
         "entity.name.type.interface",
     ],
