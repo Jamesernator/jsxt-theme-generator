@@ -12,12 +12,12 @@
     "contributes": {
         "themes": [
             {
-                "label": "JSXT",
+                "label": "JSXT Dark",
                 "uiTheme": "vs-dark",
                 "path": "./themes/JSXT-dark-theme.json"
             },
             {
-                "label": "JSXT",
+                "label": "JSXT Light",
                 "uiTheme": "vs",
                 "path": "./themes/JSXT-light-theme.json"
             }

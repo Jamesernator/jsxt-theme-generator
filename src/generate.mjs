@@ -90,24 +90,6 @@ const tokenMap = {
     variable: [
         "variable.other",
     ],
-
-    /*
-    tomlArrayKey: {
-        foreground: "#FF0000",
-    },
-    tomlTableKey: {
-        foreground: "#FF0000",
-    },
-    type: {
-        foreground: "#FF0000",
-    },
-    typeParameter: {
-        foreground: "#FF0000",
-    },
-    variable: {
-        foreground: "#FF0000",
-    },
-    */
 };
 
 /** @type {Array<{ scope: string[] | string, settings: { foreground?: string, fontStyle?: string } }>} */
@@ -150,7 +132,7 @@ const theme = JSON.stringify(
 );
 
 const file = new URL(
-    "./themes/JSXT-light-theme.json",
+    "../themes/JSXT-light-theme.json",
     import.meta.url,
 );
 
