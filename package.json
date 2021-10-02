@@ -12,11 +12,6 @@
     "contributes": {
         "themes": [
             {
-                "label": "JSXT Dark",
-                "uiTheme": "vs-dark",
-                "path": "./themes/JSXT-dark-theme.json"
-            },
-            {
                 "label": "JSXT Light",
                 "uiTheme": "vs",
                 "path": "./themes/JSXT-light-theme.json"
@@ -26,6 +21,6 @@
     "devDependencies": {
         "@jamesernator/eslint-config": "^6.8.0",
         "@types/node": "^16.10.2",
-        "typescript": "^4.5.0-dev.20210929"
+        "typescript": "^4.4.3"
     }
 }
