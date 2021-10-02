@@ -17,8 +17,7 @@
         "noUncheckedIndexedAccess": true,
         "allowJs": true,
         "checkJs": true,
-        "noEmit": true,
-        "resolveJsonModule": true
+        "noEmit": true
     },
     "ts-node": {
         "transpileOnly": true
