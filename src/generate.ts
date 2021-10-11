@@ -1,119 +1,49 @@
 import fs from "node:fs/promises";
-import lightSemanticTheme from "./JSXT-light-theme-semantic.json";
+import SemanticToken from "./SemanticToken.js";
+import type { TextmateTokenStyle } from "./TextmateTokenStyle.js";
+import type { TokenStyle } from "./TokenStyle.js";
+import tokenMap from "./tokenMap.js";
+import toTextmateStyles from "./toTextmateStyles.js";
 
-/** @type {Record<string, string[]>}
-const tokenMap = {
-    class: [
+const semanticTheme = JSON.parse(await fs.readFile(
+    new URL("./JSXT-light-theme-semantic.json", import.meta.url),
+    "utf8",
+));
 
-    ],
-    "class.declaration": [
-
-    ],
-    comment: [
-
-    ],
-    enum: [
-
-    ],
-    enumMember: [
-
-    ],
-    event: [],
-    function: [
-
-    ],
-    "function.declaration": [
-
-    ],
-    interface: [
-
-    ],
-    keyword: [
-        // "keyword.control",
-        // "keyword.operator.expression",
-        // "keyword.other",
-        // "variable.language",
-    ],
-    "keyword.storage": [
-        // "storage",
-    ],
-    label: [
-        // "entity.name.label",
-    ],
-    macro: [],
-    method: [],
-    namespace: [],
-    "namespace.declaration": [
-        // TODO Figure out declarations
-        // "entity.name.type.module",
-    ],
-    number: [
-        // "constant.numeric",
-    ],
-    operator: [
-        // "keyword.operator",
-        // "punctuation.definition.group",
-    ],
-    parameter: [
-        // "variable.parameter",
-    ],
-    "parameter.declaration": [],
-    property: [
-        // "variable.other.property",
-        // "variable.object.property",
-    ],
-    regexp: [
-        // "string.regexp",
-    ],
-    "regexp.characterClass": [
-        // "punctuation.definition.character-class.regexp",
-        // "constant.other.character-class.range.regexp",
-    ],
-    string: [
-        // "string",
-    ],
-    "string.escape": [
-        // "constant.character.escape",
-    ],
-    "string.terminator": [
-        // "punctuation.definition.string",
-        // "punctuation.definition.template-expression",
-    ],
-    struct: [],
-    tomlArrayKey: [],
-    tomlTableKey: [],
-    type: [
-        // "entity.name.type.alias",
-        // "support.type",
-    ],
-    "type.declaration": [
-        // TODO Declarations
-    ],
-    "type.primitive": [
-        // "support.type.primitive",
-    ],
-    typeParameter: [
-        // "entity.name.type",
-    ],
-    variable: [
-        // "variable.other",
-    ],
-};
-*/
-
-/** @type {Record<string, string[]>} */
-const tokenMap = {
-
+const { semanticColors } = semanticTheme as {
+    semanticColors: Record<string, TokenStyle>,
 };
 
-/** @type {Array<{ scope: string[] | string, settings: { foreground?: string, fontStyle?: string } }>} */
-const tokenColors = [];
-
-for (const [textmateToken, semanticTokens]
-    of Object.entries(tokenMap)) {
-
+function findStyles(semanticToken: SemanticToken): TokenStyle | undefined {
+    for (const candidateToken of semanticToken.subtokens()) {
+        const candidateTokenName = candidateToken.toString();
+        const styles = semanticColors[candidateTokenName];
+        if (styles) {
+            return styles;
+        }
+    }
+    return undefined;
 }
 
+const tokenColors: Array<{
+    scope: string,
+    settings: TextmateTokenStyle,
+}> = [];
+
+for (const [semanticTokenName, textmateTokens] of Object.entries(tokenMap)) {
+    const semanticToken = SemanticToken.fromString(semanticTokenName);
+    for (const textmateToken of textmateTokens) {
+        const styles = findStyles(semanticToken);
+        if (!styles) continue;
+        const textmateStyles = toTextmateStyles(styles);
+        tokenColors.push({
+            scope: textmateToken,
+            settings: textmateStyles,
+        });
+    }
+}
+
+/*
 for (const [semanticToken, styles]
     of Object.entries(lightSemanticTheme.semanticTokenColors)) {
     const textMateScopes = tokenMap[semanticToken];
@@ -121,17 +51,6 @@ for (const [semanticToken, styles]
         continue;
     }
 
-    /** @type {string[]} */
-    const fontVariants = [];
-    if ("bold" in styles && styles.bold) {
-        fontVariants.push("bold");
-    }
-    if ("italic" in styles && styles.italic) {
-        fontVariants.push("italic");
-    }
-    if ("underline" in styles && styles.underline) {
-        fontVariants.push("underline");
-    }
     tokenColors.push({
         scope: textMateScopes,
         settings: {
@@ -156,3 +75,4 @@ const file = new URL(
 );
 
 await fs.writeFile(file, theme);
+*/
