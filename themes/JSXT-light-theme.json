@@ -73,12 +73,12 @@
             "bold": true
         },
         "keyword": {
-            "foreground": "#0AF",
+            "foreground": "#A0F",
             "bold": true,
             "italic": true
         },
         "keyword.storage": {
-            "foreground": "#A0F",
+            "foreground": "#0AF",
             "bold": true
         },
         "label": {
@@ -89,6 +89,10 @@
         },
         "method": {
             "foreground": "#0AA"
+        },
+        "method.declaration": {
+            "foreground": "#0AA",
+            "underline": true
         },
         "namespace": {
             "foreground": "#0AA",
@@ -109,8 +113,16 @@
         "parameter": {
             "foreground": "#0A0"
         },
+        "parameter.declaration": {
+            "foreground": "#0A0",
+            "underline": true
+        },
         "property": {
             "foreground": "#AA0"
+        },
+        "property.declaration": {
+            "foreground": "#AA0",
+            "underline": true
         },
         "regexp": {
             "foreground": "#A09"
@@ -119,7 +131,7 @@
             "foreground": "#0AF"
         },
         "string": {
-            "foreground": "#F0F",
+            "foreground": "#0CC",
             "bold": true
         },
         "string.escape": {
@@ -142,6 +154,11 @@
             "foreground": "#F0A",
             "bold": true
         },
+        "type.declaration": {
+            "foreground": "#F0A",
+            "bold": true,
+            "underline": true
+        },
         "type.primitive": {
             "foreground": "#A00",
             "italic": true
@@ -161,7 +178,7 @@
     "tokenColors": [
         {
             "scope": [
-                "entity.name.type.class"
+                "entity.other.inherited-class, meta.class"
             ],
             "settings": {
                 "foreground": "#088",
@@ -170,7 +187,7 @@
         },
         {
             "scope": [
-                "entity.name.type.class"
+                "entity.name.type.class, meta.class"
             ],
             "settings": {
                 "foreground": "#088",
@@ -240,10 +257,11 @@
             "scope": [
                 "keyword.control",
                 "keyword.operator.expression",
-                "keyword.other"
+                "keyword.other",
+                "variable.language"
             ],
             "settings": {
-                "foreground": "#0AF",
+                "foreground": "#A0F",
                 "fontStyle": "bold italic"
             }
         },
@@ -252,7 +270,7 @@
                 "storage"
             ],
             "settings": {
-                "foreground": "#A0F",
+                "foreground": "#0AF",
                 "fontStyle": "bold"
             }
         },
@@ -324,6 +342,13 @@
             }
         },
         {
+            "scope": [],
+            "settings": {
+                "foreground": "#0A0",
+                "fontStyle": "underline"
+            }
+        },
+        {
             "scope": [
                 "variable.other.property",
                 "variable.object.property"
@@ -357,7 +382,7 @@
                 "string"
             ],
             "settings": {
-                "foreground": "#F0F",
+                "foreground": "#0CC",
                 "fontStyle": "bold"
             }
         },
@@ -409,6 +434,13 @@
             "settings": {
                 "foreground": "#F0A",
                 "fontStyle": "bold"
+            }
+        },
+        {
+            "scope": [],
+            "settings": {
+                "foreground": "#F0A",
+                "fontStyle": "bold underline"
             }
         },
         {

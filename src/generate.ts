@@ -1,99 +1,118 @@
 import fs from "node:fs/promises";
 import lightSemanticTheme from "./JSXT-light-theme-semantic.json";
 
-/** @type {Record<string, string[]>} */
+/** @type {Record<string, string[]>}
 const tokenMap = {
     class: [
-        "entity.name.type.class",
+
     ],
     "class.declaration": [
-        "entity.name.type.class",
+
     ],
     comment: [
-        "comment",
+
     ],
     enum: [
-        "entity.name.type.enum",
+
     ],
     enumMember: [
-        "variable.other.enummember",
+
     ],
     event: [],
     function: [
-        "entity.name.function",
+
     ],
-    "function.declaration": [],
+    "function.declaration": [
+
+    ],
     interface: [
-        "entity.name.type.interface",
+
     ],
     keyword: [
-        "keyword.control",
-        "keyword.operator.expression",
-        "keyword.other",
+        // "keyword.control",
+        // "keyword.operator.expression",
+        // "keyword.other",
+        // "variable.language",
     ],
     "keyword.storage": [
-        "storage",
+        // "storage",
     ],
     label: [
-        "entity.name.label",
+        // "entity.name.label",
     ],
     macro: [],
     method: [],
     namespace: [],
     "namespace.declaration": [
-        "entity.name.type.module",
+        // TODO Figure out declarations
+        // "entity.name.type.module",
     ],
     number: [
-        "constant.numeric",
+        // "constant.numeric",
     ],
     operator: [
-        "keyword.operator",
-        "punctuation.definition.group",
+        // "keyword.operator",
+        // "punctuation.definition.group",
     ],
     parameter: [
-        "variable.parameter",
+        // "variable.parameter",
     ],
+    "parameter.declaration": [],
     property: [
-        "variable.other.property",
-        "variable.object.property",
+        // "variable.other.property",
+        // "variable.object.property",
     ],
     regexp: [
-        "string.regexp",
+        // "string.regexp",
     ],
     "regexp.characterClass": [
-        "punctuation.definition.character-class.regexp",
-        "constant.other.character-class.range.regexp",
+        // "punctuation.definition.character-class.regexp",
+        // "constant.other.character-class.range.regexp",
     ],
     string: [
-        "string",
+        // "string",
     ],
     "string.escape": [
-        "constant.character.escape",
+        // "constant.character.escape",
     ],
     "string.terminator": [
-        "punctuation.definition.string",
-        "punctuation.definition.template-expression",
+        // "punctuation.definition.string",
+        // "punctuation.definition.template-expression",
     ],
     struct: [],
     tomlArrayKey: [],
     tomlTableKey: [],
     type: [
-        "entity.name.type.alias",
-        "support.type",
+        // "entity.name.type.alias",
+        // "support.type",
+    ],
+    "type.declaration": [
+        // TODO Declarations
     ],
     "type.primitive": [
-        "support.type.primitive",
+        // "support.type.primitive",
     ],
     typeParameter: [
-        "entity.name.type",
+        // "entity.name.type",
     ],
     variable: [
-        "variable.other",
+        // "variable.other",
     ],
+};
+*/
+
+/** @type {Record<string, string[]>} */
+const tokenMap = {
+
 };
 
 /** @type {Array<{ scope: string[] | string, settings: { foreground?: string, fontStyle?: string } }>} */
 const tokenColors = [];
+
+for (const [textmateToken, semanticTokens]
+    of Object.entries(tokenMap)) {
+
+}
 
 for (const [semanticToken, styles]
     of Object.entries(lightSemanticTheme.semanticTokenColors)) {

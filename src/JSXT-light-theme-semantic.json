@@ -73,12 +73,12 @@
             "bold": true
         },
         "keyword": {
-            "foreground": "#0AF",
+            "foreground": "#A0F",
             "bold": true,
             "italic": true
         },
         "keyword.storage": {
-            "foreground": "#A0F",
+            "foreground": "#0AF",
             "bold": true
         },
         "label": {
@@ -89,6 +89,10 @@
         },
         "method": {
             "foreground": "#0AA"
+        },
+        "method.declaration": {
+            "foreground": "#0AA",
+            "underline": true
         },
         "namespace": {
             "foreground": "#0AA",
@@ -109,8 +113,16 @@
         "parameter": {
             "foreground": "#0A0"
         },
+        "parameter.declaration": {
+            "foreground": "#0A0",
+            "underline": true
+        },
         "property": {
             "foreground": "#AA0"
+        },
+        "property.declaration": {
+            "foreground": "#AA0",
+            "underline": true
         },
         "regexp": {
             "foreground": "#A09"
@@ -119,7 +131,7 @@
             "foreground": "#0AF"
         },
         "string": {
-            "foreground": "#F0F",
+            "foreground": "#0CC",
             "bold": true
         },
         "string.escape": {
@@ -141,6 +153,11 @@
         "type": {
             "foreground": "#F0A",
             "bold": true
+        },
+        "type.declaration": {
+            "foreground": "#F0A",
+            "bold": true,
+            "underline": true
         },
         "type.primitive": {
             "foreground": "#A00",

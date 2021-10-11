@@ -1,10 +1,8 @@
 {
-    "include": ["./**/*.mjs", "./**/*.d.ts"],
+    "include": ["./**/*.ts"],
     "compilerOptions": {
         "target": "esnext",
-        "module": "NodeNext",
-        "sourceMap": true,
-        "downlevelIteration": true,
+        "module": "esnext",
 
         "strict": true,
         "noImplicitAny": true,
@@ -15,8 +13,7 @@
         "useDefineForClassFields": true,
         "importsNotUsedAsValues": "error",
         "noUncheckedIndexedAccess": true,
-        "allowJs": true,
-        "checkJs": true,
+        "isolatedModules": true,
         "noEmit": true
     },
     "ts-node": {
