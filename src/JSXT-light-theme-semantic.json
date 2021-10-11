@@ -51,6 +51,9 @@
         "comment": {
             "foreground": "#AAA"
         },
+        "constant": {
+            "foreground": "#00A"
+        },
         "enum": {
             "foreground": "#F0A",
             "bold": true

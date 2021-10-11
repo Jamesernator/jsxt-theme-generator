@@ -14,6 +14,10 @@ const tokenMap: Readonly<Record<string, Array<string>>>
         comment: [
             "comment",
         ],
+        constant: [],
+        "constant.standardLibrary": [
+            "constant.language",
+        ],
         enum: [
             "entity.name.type.enum",
         ],

@@ -10,14 +10,14 @@ const semanticTheme = JSON.parse(await fs.readFile(
     "utf8",
 ));
 
-const { semanticColors } = semanticTheme as {
-    semanticColors: Record<string, TokenStyle>,
+const { semanticTokenColors } = semanticTheme as {
+    semanticTokenColors: Record<string, TokenStyle>,
 };
 
 function findStyles(semanticToken: SemanticToken): TokenStyle | undefined {
     for (const candidateToken of semanticToken.subtokens()) {
         const candidateTokenName = candidateToken.toString();
-        const styles = semanticColors[candidateTokenName];
+        const styles = semanticTokenColors[candidateTokenName];
         if (styles) {
             return styles;
         }
@@ -43,26 +43,9 @@ for (const [semanticTokenName, textmateTokens] of Object.entries(tokenMap)) {
     }
 }
 
-/*
-for (const [semanticToken, styles]
-    of Object.entries(lightSemanticTheme.semanticTokenColors)) {
-    const textMateScopes = tokenMap[semanticToken];
-    if (!textMateScopes) {
-        continue;
-    }
-
-    tokenColors.push({
-        scope: textMateScopes,
-        settings: {
-            foreground: styles.foreground,
-            fontStyle: fontVariants.join(" "),
-        },
-    });
-}
-
 const theme = JSON.stringify(
     {
-        ...lightSemanticTheme,
+        ...semanticTheme,
         tokenColors,
     },
     null,
@@ -75,4 +58,3 @@ const file = new URL(
 );
 
 await fs.writeFile(file, theme);
-*/
