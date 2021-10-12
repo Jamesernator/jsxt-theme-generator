@@ -170,3 +170,9 @@ export class Point {
         console.log(new.target);
     }
 }
+
+export async function exampleA(
+    paramExample: "blue",
+): Promise<"blue" | 3> {
+    return Promise.resolve(paramExample);
+}

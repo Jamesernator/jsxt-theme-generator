@@ -1,6 +1,9 @@
 
 const tokenMap: Readonly<Record<string, Array<string>>>
     = Object.freeze({
+        attribute: [
+            "entity.other.attribute-name",
+        ],
         boolean: [
             "constant.language.boolean",
         ],
@@ -15,7 +18,7 @@ const tokenMap: Readonly<Record<string, Array<string>>>
             "comment",
         ],
         constant: [],
-        "constant.standardLibrary": [
+        "constant.defaultLibrary": [
             "constant.language",
         ],
         enum: [
@@ -33,6 +36,7 @@ const tokenMap: Readonly<Record<string, Array<string>>>
         event: [],
         function: [
             "entity.name.function",
+            "support.function",
         ],
         "function.declaration": [
             "meta.definition.function entity.name.function",
@@ -49,14 +53,17 @@ const tokenMap: Readonly<Record<string, Array<string>>>
         ],
         "keyword.expression": [
             "variable.language",
-            "keyword.other.new",
+        ],
+        "keyword.operator": [
+            "keyword.operator.new",
             "keyword.operator.expression",
         ],
         "keyword.storage": [
-            "keyword.storage",
+            "storage",
         ],
         "keyword.control": [
             "keyword.control",
+            "keyword.operator.expression.of",
         ],
         label: [
             "entity.name.label",
@@ -80,7 +87,6 @@ const tokenMap: Readonly<Record<string, Array<string>>>
         ],
         operator: [
             "keyword.operator",
-            "punctuation.separator",
             "punctuation.definition.group",
         ],
         "operator.assignment": [
@@ -114,6 +120,10 @@ const tokenMap: Readonly<Record<string, Array<string>>>
             "meta.object-literal.key string.quoted.double",
             "meta.definition.property variable.object.property",
         ],
+        punctuation: [
+            "punctuation",
+            "meta.brace",
+        ],
         regexp: [
             "string.regexp",
         ],
@@ -123,6 +133,7 @@ const tokenMap: Readonly<Record<string, Array<string>>>
         ],
         string: [
             "string",
+            "constant.character",
         ],
         "string.escape": [
             "constant.character.escape",
@@ -132,6 +143,12 @@ const tokenMap: Readonly<Record<string, Array<string>>>
             "punctuation.definition.template-expression",
         ],
         struct: [],
+        tag: [
+            "entity.name.tag",
+        ],
+        text: [
+            "text",
+        ],
         tomlArrayKey: [],
         tomlTableKey: [],
         type: [
