@@ -1,6 +1,7 @@
 "use strict";
+const path = require("path");
 const createEslintConfig = require("@jamesernator/eslint-config");
 
 module.exports = createEslintConfig({ 
-    project: "./tsconfig.json",
+    project: path.join(__dirname, "./tsconfig.json"),
 });
