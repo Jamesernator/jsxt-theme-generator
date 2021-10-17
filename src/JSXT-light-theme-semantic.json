@@ -163,6 +163,9 @@
         "number": {
             "foreground": "#00A"
         },
+        "constant": {
+            "foreground": "#00A"
+        },
         "label": {
             "foreground": "#F88"
         },

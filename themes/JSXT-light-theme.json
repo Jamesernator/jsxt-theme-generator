@@ -163,6 +163,9 @@
         "number": {
             "foreground": "#00A"
         },
+        "constant": {
+            "foreground": "#00A"
+        },
         "label": {
             "foreground": "#F88"
         },
@@ -238,6 +241,12 @@
             "scope": "comment",
             "settings": {
                 "foreground": "#AAA"
+            }
+        },
+        {
+            "scope": "constant.language",
+            "settings": {
+                "foreground": "#00A"
             }
         },
         {
