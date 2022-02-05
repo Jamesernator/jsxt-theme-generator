@@ -1,13 +1,11 @@
-import fs from "node:fs/promises";
-import SemanticToken from "./SemanticToken.js";
-import type { TextmateTokenStyle } from "./TextmateTokenStyle.js";
-import type { TokenStyle } from "./TokenStyle.js";
-import tokenMap from "./tokenMap.js";
-import toTextmateStyles from "./toTextmateStyles.js";
+import SemanticToken from "./SemanticToken.ts";
+import type { TextmateTokenStyle } from "./TextmateTokenStyle.ts";
+import type { TokenStyle } from "./TokenStyle.ts";
+import toTextmateStyles from "./toTextmateStyles.ts";
+import tokenMap from "./tokenMap.ts";
 
-const semanticTheme = JSON.parse(await fs.readFile(
+const semanticTheme = JSON.parse(await Deno.readTextFile(
     new URL("./JSXT-light-theme-semantic.json", import.meta.url),
-    "utf8",
 ));
 
 const { semanticTokenColors } = semanticTheme as {
@@ -57,4 +55,4 @@ const file = new URL(
     import.meta.url,
 );
 
-await fs.writeFile(file, theme);
+await Deno.writeTextFile(file, theme);

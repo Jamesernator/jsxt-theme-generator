@@ -1,0 +1,39 @@
+{
+    "$schema": "./colors.schema.json",
+    "black": {
+        "bright": "#777",
+        "normal": "#444"
+    },
+    "blue": {
+        "bright": "#0AF",
+        "normal": "#00F"
+    },
+    "cyan": {
+        "bright": "#0CC",
+        "normal": "#0AA"
+    },
+    "green": {
+        "bright": "#0C3",
+        "normal": "#0A0"
+    },
+    "magenta": {
+        "bright": "#F0F",
+        "normal": "#C0C"
+    },
+    "orange": {
+        "normal": "#D60",
+        "bright": "#F80"
+    },
+    "red": {
+        "bright": "#F00",
+        "normal": "#C00"
+    },
+    "white": {
+        "bright": "#FFF",
+        "normal": "#EEE"
+    },
+    "yellow": {
+        "bright": "#CC0",
+        "normal": "#BB0"
+    }
+}

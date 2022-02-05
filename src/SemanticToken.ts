@@ -1,4 +1,4 @@
-import assert from "node:assert/strict";
+import assert from "./assert.ts";
 
 type SemanticTokenOptions = {
     modifiers?: ReadonlyArray<string> | undefined,
@@ -49,7 +49,7 @@ export default class SemanticToken {
         yield this;
         if (this.#language !== null) {
             const noLanguageSubtoken = new SemanticToken(
-                this.#token, 
+                this.#token,
                 {
                     modifiers: this.#modifiers,
                     language: null,

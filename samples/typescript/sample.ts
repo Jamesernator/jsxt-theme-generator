@@ -14,6 +14,7 @@ class ExampleClass {
 /**
  * Example block comment
  * @example Example doc
+ * @type {ExampleSubclass}
  */
 export default class ExampleSubclass extends ExampleClass {
     static readonly x = 3;
@@ -41,6 +42,8 @@ export default class ExampleSubclass extends ExampleClass {
         this.#fooBar();
     }
 }
+
+export const exampleInstance = new ExampleClass(3);
 
 // Example comment
 export enum ExampleEnum {

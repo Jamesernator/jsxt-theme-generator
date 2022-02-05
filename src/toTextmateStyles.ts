@@ -1,5 +1,5 @@
-import type { TextmateTokenStyle } from "./TextmateTokenStyle.js";
-import type { TokenStyle } from "./TokenStyle.js";
+import type { TextmateTokenStyle } from "./TextmateTokenStyle.ts";
+import type { TokenStyle } from "./TokenStyle.ts";
 
 export default function toTextmateStyles(
     tokenStyle: Readonly<TokenStyle>,

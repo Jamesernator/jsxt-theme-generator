@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "$defs": {
+        "color": {
+            "$schema": "http://json-schema.org/schema",
+            "type": "object",
+            "properties": {
+                "normal": {
+                    "type": "string",
+                    "format": "color-hex"
+                },
+                "bright": {
+                    "type": "string",
+                    "format": "color-hex"
+                }
+            }
+        }
+    },
+    "patternProperties": {
+        "^[a-z]+$": { "$ref": "#/$defs/color" }
+    }
+}
