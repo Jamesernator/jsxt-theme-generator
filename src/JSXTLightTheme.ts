@@ -1,6 +1,6 @@
-import type { TokenStyle } from "./TokenStyle.ts";
-import type { WorkbenchTheme } from "./WorkbenchTheme.ts";
 import colors from "./colors.json" assert { type: "json" };
+import type { TokenStyle } from "./lib/TokenStyle.ts";
+import type { WorkbenchTheme } from "./lib/WorkbenchTheme.ts";
 
 /* eslint sort-keys: "error" */
 export const workbench: Partial<WorkbenchTheme> = {

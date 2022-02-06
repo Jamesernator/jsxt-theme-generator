@@ -1,16 +1,9 @@
-import SemanticToken from "./SemanticToken.ts";
-import type { TextmateTokenStyle } from "./TextmateTokenStyle.ts";
-import type { TokenStyle } from "./TokenStyle.ts";
-import toTextmateStyles from "./toTextmateStyles.ts";
-import tokenMap from "./tokenMap.ts";
-
-const semanticTheme = JSON.parse(await Deno.readTextFile(
-    new URL("./JSXT-light-theme-semantic.json", import.meta.url),
-));
-
-const { semanticTokenColors } = semanticTheme as {
-    semanticTokenColors: Record<string, TokenStyle>,
-};
+import { workbench, semanticTokenColors } from "./JSXTLightTheme.ts";
+import SemanticToken from "./lib/SemanticToken.ts";
+import type { TextmateTokenStyle } from "./lib/TextmateTokenStyle.ts";
+import type { TokenStyle } from "./lib/TokenStyle.ts";
+import toTextmateStyles from "./lib/toTextmateStyles.ts";
+import tokenMap from "./tokenMap.json" assert { type: "json" };
 
 function findStyles(semanticToken: SemanticToken): TokenStyle | undefined {
     for (const candidateToken of semanticToken.subtokens()) {
@@ -41,18 +34,19 @@ for (const [semanticTokenName, textmateTokens] of Object.entries(tokenMap)) {
     }
 }
 
-const theme = JSON.stringify(
-    {
-        ...semanticTheme,
-        tokenColors,
-    },
-    null,
-    4,
-);
+const theme = {
+    $schema: "vscode://schemas/color-theme",
+    name: "JSXT Light",
+    type: "light",
+    colors: workbench,
+    semanticHighlighting: true,
+    semanticTokenColors,
+    tokenColors,
+};
 
 const file = new URL(
-    "../themes/JSXT-light-theme.json",
+    "../out/JSXT-light-theme.json",
     import.meta.url,
 );
 
-await Deno.writeTextFile(file, theme);
+await Deno.writeTextFile(file, JSON.stringify(theme, null, 4));

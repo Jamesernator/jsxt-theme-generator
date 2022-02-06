@@ -1,8 +1,8 @@
 {
-    "name": "jsxt-theme-generator",
+    "name": "jsxt-theme",
     "type": "module",
     "displayName": "jsxt-theme",
-    "description": "",
+    "description": "A light theme",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.60.0"
@@ -15,14 +15,8 @@
             {
                 "label": "JSXT Light",
                 "uiTheme": "vs",
-                "path": "./themes/JSXT-light-theme.json"
+                "path": "./JSXT-light-theme.json"
             }
         ]
-    },
-    "devDependencies": {
-        "@jamesernator/eslint-config": "^6.8.0",
-        "@types/node": "^16.10.2",
-        "tsm": "^2.1.2",
-        "typescript": "^4.5.0-beta"
     }
 }
