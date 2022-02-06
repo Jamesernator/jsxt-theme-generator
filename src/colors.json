@@ -2,38 +2,63 @@
     "$schema": "./colors.schema.json",
     "black": {
         "bright": "#777",
+        "dark": "#222",
+        "dull": "#333",
+        "medium": "#555",
         "normal": "#444"
     },
     "blue": {
         "bright": "#0AF",
+        "dark": "#00A",
         "normal": "#00F"
     },
     "cyan": {
         "bright": "#0CC",
         "normal": "#0AA"
     },
+    "gray": {
+        "bright": "#CCC",
+        "dull": "#888",
+        "normal": "#AAA"
+    },
     "green": {
         "bright": "#0C3",
+        "medium": "#0B0",
+        "mediumBright": "#0C0",
         "normal": "#0A0"
+    },
+    "lilac": {
+        "normal": "#77C"
     },
     "magenta": {
         "bright": "#F0F",
+        "medium": "#F0A",
         "normal": "#C0C"
     },
     "orange": {
-        "normal": "#D60",
-        "bright": "#F80"
+        "bright": "#F80",
+        "dark": "#940",
+        "normal": "#D60"
+    },
+    "purple": {
+        "dull": "#A0C",
+        "normal": "#A0F"
     },
     "red": {
         "bright": "#F00",
         "normal": "#C00"
     },
+    "salmon": {
+        "normal": "#F88"
+    },
     "white": {
         "bright": "#FFF",
+        "dull": "#DDD",
         "normal": "#EEE"
     },
     "yellow": {
         "bright": "#CC0",
+        "dull": "#AA0",
         "normal": "#BB0"
     }
 }
