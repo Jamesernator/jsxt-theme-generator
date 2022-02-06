@@ -169,4 +169,36 @@ export const semanticTokenColors: Record<string, TokenStyle> = {
     "variable.declaration": {
         underline: true,
     },
+    // TODO
+    comment: {
+        foreground: "#AAA",
+    },
+    keyword: {
+        foreground: "#A0F",
+        bold: true,
+    },
+    "keyword.operator": {
+        foreground: "#77C",
+        bold: true,
+    },
+    "keyword.expression": {
+        foreground: "#A0F",
+    },
+    "keyword.storage": {
+        foreground: "#0AF",
+        bold: true,
+        italic: true,
+    },
+    boolean: {
+        foreground: "#00A",
+    },
+    number: {
+        foreground: "#00A",
+    },
+    constant: {
+        foreground: "#00A",
+    },
+    label: {
+        foreground: "#F88",
+    },
 };
