@@ -6,14 +6,16 @@ import toTextmateStyles from "./lib/toTextmateStyles.ts";
 import tokenMap from "./tokenMap.json" assert { type: "json" };
 
 function findStyles(semanticToken: SemanticToken): TokenStyle | undefined {
+    let allStyles: TokenStyle | undefined;
+
     for (const candidateToken of semanticToken.subtokens()) {
         const candidateTokenName = candidateToken.toString();
         const styles = semanticTokenColors[candidateTokenName];
         if (styles) {
-            return styles;
+            allStyles = { ...allStyles, ...styles };
         }
     }
-    return undefined;
+    return allStyles;
 }
 
 const tokenColors: Array<{
@@ -45,7 +47,7 @@ const theme = {
 };
 
 const file = new URL(
-    "../out/JSXT-light-theme.json",
+    "../jsxt-theme/JSXT-light-theme.json",
     import.meta.url,
 );
 

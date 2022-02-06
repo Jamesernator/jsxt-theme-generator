@@ -1,8 +1,8 @@
 import assert from "./assert.ts";
 
 type SemanticTokenOptions = {
-    modifiers?: ReadonlyArray<string> | undefined,
-    language?: string | null | undefined,
+    modifiers?: ReadonlyArray<string> | undefined;
+    language?: string | null | undefined;
 };
 
 export default class SemanticToken {
@@ -26,7 +26,7 @@ export default class SemanticToken {
 
     constructor(
         token: string,
-        { modifiers=[], language=null }: SemanticTokenOptions={},
+        { modifiers = [], language = null }: SemanticTokenOptions = {},
     ) {
         this.#token = token;
         this.#modifiers = Object.freeze([...new Set(modifiers)]);
@@ -45,18 +45,7 @@ export default class SemanticToken {
         return this.#language;
     }
 
-    * subtokens(): Generator<SemanticToken> {
-        yield this;
-        if (this.#language !== null) {
-            const noLanguageSubtoken = new SemanticToken(
-                this.#token,
-                {
-                    modifiers: this.#modifiers,
-                    language: null,
-                },
-            );
-            yield* noLanguageSubtoken.subtokens();
-        }
+    *subtokens(): Generator<SemanticToken> {
         for (const modifier of this.#modifiers) {
             const newModifiers = new Set(this.#modifiers);
             newModifiers.delete(modifier);
@@ -69,19 +58,30 @@ export default class SemanticToken {
             );
             yield* withoutModifierSubtoken.subtokens();
         }
+        if (this.#language !== null) {
+            const noLanguageSubtoken = new SemanticToken(
+                this.#token,
+                {
+                    modifiers: this.#modifiers,
+                    language: null,
+                },
+            );
+            yield* noLanguageSubtoken.subtokens();
+        }
+        yield this;
     }
 
     isSubtoken(other: SemanticToken): boolean {
-        return this.#token === other.#token
-            && other.#modifiers.every(
-                modifier => this.#modifiers.includes(modifier)
-            )
-            && (other.#language === null || other.#language === this.#language);
+        return this.#token === other.#token &&
+            other.#modifiers.every(
+                (modifier) => this.#modifiers.includes(modifier),
+            ) &&
+            (other.#language === null || other.#language === this.#language);
     }
 
     toString(): string {
-        return this.#token
-            + this.#modifiers.map((modifier) => `.${ modifier }`).join("")
-            + (this.#language === null ? "" : `:${ this.#language }`);
+        return this.#token +
+            this.#modifiers.map((modifier) => `.${modifier}`).join("") +
+            (this.#language === null ? "" : `:${this.#language}`);
     }
 }
