@@ -48,7 +48,12 @@ export const workbench: Partial<WorkbenchTheme> = {
 const theme = {
     assignmentOperator: colors.magenta.bright,
     attribute: colors.green.bright,
+    comment: colors.gray.normal,
+    expressionKeyword: colors.purple.normal,
     functionLike: colors.cyan.bright,
+    keyword: colors.purple.normal,
+    label: colors.salmon.normal,
+    literal: colors.blue.normal,
     operator: colors.lilac.normal,
     punctuation: colors.gray.dull,
     regexpCharacterClass: colors.magenta.bright,
@@ -64,12 +69,21 @@ export const semanticTokenColors: Record<string, TokenStyle> = {
     attribute: {
         foreground: theme.attribute,
     },
+    boolean: {
+        foreground: theme.literal,
+    },
     class: {
         bold: true,
         foreground: theme.typeLike,
     },
     "class.declaration": {
         underline: true,
+    },
+    comment: {
+        foreground: theme.comment,
+    },
+    constant: {
+        foreground: theme.literal,
     },
     enum: {
         bold: true,
@@ -97,6 +111,25 @@ export const semanticTokenColors: Record<string, TokenStyle> = {
     "interface.declaration": {
         underline: true,
     },
+    keyword: {
+        bold: true,
+        foreground: theme.keyword,
+    },
+    "keyword.expression": {
+        foreground: theme.expressionKeyword,
+    },
+    "keyword.operator": {
+        bold: true,
+        foreground: theme.operator,
+    },
+    "keyword.storage": {
+        bold: true,
+        foreground: theme.expressionKeyword,
+        italic: true,
+    },
+    label: {
+        foreground: theme.label,
+    },
     method: {
         foreground: theme.functionLike,
     },
@@ -109,6 +142,9 @@ export const semanticTokenColors: Record<string, TokenStyle> = {
     },
     "namespace.declaration": {
         underline: true,
+    },
+    number: {
+        foreground: theme.literal,
     },
     operator: {
         bold: true,
@@ -168,37 +204,5 @@ export const semanticTokenColors: Record<string, TokenStyle> = {
     },
     "variable.declaration": {
         underline: true,
-    },
-    // TODO
-    comment: {
-        foreground: "#AAA",
-    },
-    keyword: {
-        foreground: "#A0F",
-        bold: true,
-    },
-    "keyword.operator": {
-        foreground: "#77C",
-        bold: true,
-    },
-    "keyword.expression": {
-        foreground: "#A0F",
-    },
-    "keyword.storage": {
-        foreground: "#0AF",
-        bold: true,
-        italic: true,
-    },
-    boolean: {
-        foreground: "#00A",
-    },
-    number: {
-        foreground: "#00A",
-    },
-    constant: {
-        foreground: "#00A",
-    },
-    label: {
-        foreground: "#F88",
     },
 };
