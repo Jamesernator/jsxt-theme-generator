@@ -1,0 +1,26 @@
+/* CSV */
+ff00aa,dd0000,ff9922,ffcc22,00cc33,33ffff,00aaff,684fba
+
+/* With # */
+#ff00aa, #dd0000, #ff9922, #ffcc22, #00cc33, #33ffff, #00aaff, #684fba
+
+/* Array */
+["ff00aa","dd0000","ff9922","ffcc22","00cc33","33ffff","00aaff","684fba"]
+
+/* Object */
+{"Fashion Fuchsia":"ff00aa","Rosso Corsa":"dd0000","Yellow Orange Color Wheel":"ff9922","Sunglow":"ffcc22","Lime Green":"00cc33","Aqua":"33ffff","Blue Jeans":"00aaff","Plump Purple":"684fba"}
+
+/* Extended Array */
+[{"name":"Fashion Fuchsia","hex":"ff00aa","rgb":[255,0,170],"cmyk":[0,100,33,0],"hsb":[320,100,100],"hsl":[320,100,50],"lab":[56,88,-19]},{"name":"Rosso Corsa","hex":"dd0000","rgb":[221,0,0],"cmyk":[0,100,100,13],"hsb":[0,100,87],"hsl":[0,100,43],"lab":[46,72,60]},{"name":"Yellow Orange Color Wheel","hex":"ff9922","rgb":[255,153,34],"cmyk":[0,40,87,0],"hsb":[32,87,100],"hsl":[32,100,57],"lab":[72,31,71]},{"name":"Sunglow","hex":"ffcc22","rgb":[255,204,34],"cmyk":[0,20,87,0],"hsb":[46,87,100],"hsl":[46,100,57],"lab":[84,4,81]},{"name":"Lime Green","hex":"00cc33","rgb":[0,204,51],"cmyk":[100,0,75,20],"hsb":[135,100,80],"hsl":[135,100,40],"lab":[72,-71,60]},{"name":"Aqua","hex":"33ffff","rgb":[51,255,255],"cmyk":[80,0,0,0],"hsb":[180,80,100],"hsl":[180,100,60],"lab":[91,-46,-14]},{"name":"Blue Jeans","hex":"00aaff","rgb":[0,170,255],"cmyk":[100,33,0,0],"hsb":[200,100,100],"hsl":[200,100,50],"lab":[66,-6,-52]},{"name":"Plump Purple","hex":"684fba","rgb":[104,79,186],"cmyk":[44,58,0,27],"hsb":[254,58,73],"hsl":[254,44,52],"lab":[41,37,-53]}]
+
+/* XML */
+<palette>
+  <color name="Fashion Fuchsia" hex="ff00aa" r="255" g="0" b="170" />
+  <color name="Rosso Corsa" hex="dd0000" r="221" g="0" b="0" />
+  <color name="Yellow Orange Color Wheel" hex="ff9922" r="255" g="153" b="34" />
+  <color name="Sunglow" hex="ffcc22" r="255" g="204" b="34" />
+  <color name="Lime Green" hex="00cc33" r="0" g="204" b="51" />
+  <color name="Aqua" hex="33ffff" r="51" g="255" b="255" />
+  <color name="Blue Jeans" hex="00aaff" r="0" g="170" b="255" />
+  <color name="Plump Purple" hex="684fba" r="104" g="79" b="186" />
+</palette>

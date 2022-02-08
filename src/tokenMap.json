@@ -111,7 +111,8 @@
     "property": [
         "variable.other.property",
         "variable.object.property",
-        "support.variable.property"
+        "support.variable.property",
+        "support.type.property-name"
     ],
     "property.declaration": [
         "meta.object-literal.key",

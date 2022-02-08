@@ -3,6 +3,179 @@ import type { TokenStyle } from "./lib/TokenStyle.ts";
 import type { WorkbenchTheme } from "./lib/WorkbenchTheme.ts";
 
 /* eslint sort-keys: "error" */
+
+const theme = {
+    assignmentOperator: colors.black.bright,
+    attribute: colors.black.bright,
+    comment: colors.black.bright,
+    expressionOrStorageKeyword: colors.purple.normal,
+    functionLike: colors.black.bright,
+    keyword: colors.blue.bright,
+    label: colors.black.bright,
+    literal: colors.black.bright,
+    operator: colors.black.bright,
+    primitiveType: colors.black.bright,
+    propertyLike: colors.blue.bright,
+    punctuation: colors.black.bright,
+    regexpCharacterClass: colors.black.bright,
+    stringEscapeLike: colors.black.bright,
+    stringLike: colors.orange.bright,
+    tag: colors.black.bright,
+    text: colors.black.bright,
+    typeLike: colors.green.bright,
+    variableLike: colors.magenta.bright,
+};
+
+export const semanticTokenColors: Record<string, TokenStyle> = {
+    attribute: {
+        foreground: theme.attribute,
+    },
+    boolean: {
+        foreground: theme.literal,
+    },
+    class: {
+        bold: true,
+        foreground: theme.typeLike,
+    },
+    "class.declaration": {
+        underline: true,
+    },
+    comment: {
+        foreground: theme.comment,
+    },
+    constant: {
+        foreground: theme.literal,
+    },
+    enum: {
+        bold: true,
+        foreground: theme.typeLike,
+    },
+    "enum.declaration": {
+        underline: true,
+    },
+    enumMember: {
+        foreground: theme.propertyLike,
+    },
+    "enumMember.declaration": {
+        underline: true,
+    },
+    function: {
+        foreground: theme.functionLike,
+    },
+    "function.declaration": {
+        underline: true,
+    },
+    interface: {
+        bold: true,
+        foreground: theme.typeLike,
+    },
+    "interface.declaration": {
+        underline: true,
+    },
+    keyword: {
+        bold: true,
+        foreground: theme.keyword,
+    },
+    "keyword.expression": {
+        foreground: theme.expressionOrStorageKeyword,
+    },
+    "keyword.operator": {
+        bold: true,
+        foreground: theme.operator,
+    },
+    "keyword.storage": {
+        bold: true,
+        foreground: theme.expressionOrStorageKeyword,
+        italic: true,
+    },
+    label: {
+        foreground: theme.label,
+    },
+    method: {
+        foreground: theme.functionLike,
+    },
+    "method.declaration": {
+        underline: true,
+    },
+    namespace: {
+        bold: true,
+        foreground: theme.typeLike,
+    },
+    "namespace.declaration": {
+        underline: true,
+    },
+    number: {
+        foreground: theme.literal,
+    },
+    operator: {
+        bold: true,
+        foreground: theme.operator,
+    },
+    "operator.assignment": {
+        bold: true,
+        foreground: theme.assignmentOperator,
+    },
+    parameter: {
+        foreground: theme.variableLike,
+    },
+    "parameter.declaration": {
+        underline: true,
+    },
+    property: {
+        foreground: theme.propertyLike,
+    },
+    "property.declaration": {
+        underline: true,
+    },
+    punctuation: {
+        bold: true,
+        foreground: colors.black.bright,
+        underline: false,
+    },
+    regexp: {
+        foreground: theme.stringLike,
+    },
+    "regexp.characterClass": {
+        foreground: theme.regexpCharacterClass,
+    },
+    string: {
+        foreground: theme.stringLike,
+    },
+    "string.escape": {
+        foreground: theme.stringEscapeLike,
+    },
+    tag: {
+        bold: true,
+        foreground: theme.tag,
+    },
+    text: {
+        foreground: theme.text,
+    },
+    type: {
+        bold: true,
+        foreground: theme.typeLike,
+    },
+    "type.declaration": {
+        underline: true,
+    },
+    "type.primitive": {
+        foreground: theme.primitiveType,
+    },
+    typeParameter: {
+        bold: true,
+        foreground: theme.typeLike,
+    },
+    "typeParameter.declaration": {
+        underline: true,
+    },
+    variable: {
+        foreground: theme.variableLike,
+    },
+    "variable.declaration": {
+        underline: true,
+    },
+};
+
 export const workbench: Partial<WorkbenchTheme> = {
     "activityBar.activeBackground": colors.white.bright,
     "activityBar.activeBorder": colors.blue.bright,
@@ -43,166 +216,4 @@ export const workbench: Partial<WorkbenchTheme> = {
     "terminalCursor.foreground": colors.gray.normal,
 
     "widget.shadow": colors.black.medium,
-};
-
-const theme = {
-    assignmentOperator: colors.magenta.bright,
-    attribute: colors.green.bright,
-    comment: colors.gray.normal,
-    expressionKeyword: colors.purple.normal,
-    functionLike: colors.cyan.bright,
-    keyword: colors.purple.normal,
-    label: colors.salmon.normal,
-    literal: colors.blue.normal,
-    operator: colors.lilac.normal,
-    punctuation: colors.gray.dull,
-    regexpCharacterClass: colors.magenta.bright,
-    stringEscapeLike: colors.blue.bright,
-    stringLike: colors.yellow.normal,
-    tag: colors.blue.bright,
-    text: colors.magenta.bright,
-    typeLike: colors.blue.bright,
-    variableLike: colors.green.bright,
-};
-
-export const semanticTokenColors: Record<string, TokenStyle> = {
-    attribute: {
-        foreground: theme.attribute,
-    },
-    boolean: {
-        foreground: theme.literal,
-    },
-    class: {
-        bold: true,
-        foreground: theme.typeLike,
-    },
-    "class.declaration": {
-        underline: true,
-    },
-    comment: {
-        foreground: theme.comment,
-    },
-    constant: {
-        foreground: theme.literal,
-    },
-    enum: {
-        bold: true,
-        foreground: theme.typeLike,
-    },
-    "enum.declaration": {
-        underline: true,
-    },
-    enumMember: {
-        foreground: theme.stringLike,
-    },
-    "enumMember.declaration": {
-        underline: true,
-    },
-    function: {
-        foreground: theme.functionLike,
-    },
-    "function.declaration": {
-        underline: true,
-    },
-    interface: {
-        bold: true,
-        foreground: theme.typeLike,
-    },
-    "interface.declaration": {
-        underline: true,
-    },
-    keyword: {
-        bold: true,
-        foreground: theme.keyword,
-    },
-    "keyword.expression": {
-        foreground: theme.expressionKeyword,
-    },
-    "keyword.operator": {
-        bold: true,
-        foreground: theme.operator,
-    },
-    "keyword.storage": {
-        bold: true,
-        foreground: theme.expressionKeyword,
-        italic: true,
-    },
-    label: {
-        foreground: theme.label,
-    },
-    method: {
-        foreground: theme.functionLike,
-    },
-    "method.declaration": {
-        underline: true,
-    },
-    namespace: {
-        bold: true,
-        foreground: theme.typeLike,
-    },
-    "namespace.declaration": {
-        underline: true,
-    },
-    number: {
-        foreground: theme.literal,
-    },
-    operator: {
-        bold: true,
-        foreground: theme.operator,
-    },
-    "operator.assignment": {
-        bold: true,
-        foreground: theme.assignmentOperator,
-    },
-    parameter: {
-        foreground: theme.variableLike,
-    },
-    "parameter.declaration": {
-        underline: true,
-    },
-    property: {
-        foreground: theme.stringLike,
-    },
-    "property.declaration": {
-        underline: true,
-    },
-    regexp: {
-        foreground: theme.stringLike,
-    },
-    "regexp.characterClass": {
-        foreground: theme.regexpCharacterClass,
-    },
-    string: {
-        foreground: theme.stringLike,
-    },
-    "string.escape": {
-        foreground: theme.stringEscapeLike,
-    },
-    tag: {
-        bold: true,
-        foreground: theme.tag,
-    },
-    text: {
-        foreground: theme.text,
-    },
-    type: {
-        bold: true,
-        foreground: theme.typeLike,
-    },
-    "type.declaration": {
-        underline: true,
-    },
-    typeParameter: {
-        bold: true,
-        foreground: theme.typeLike,
-    },
-    "typeParameter.declaration": {
-        underline: true,
-    },
-    variable: {
-        foreground: theme.variableLike,
-    },
-    "variable.declaration": {
-        underline: true,
-    },
 };

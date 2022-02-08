@@ -42,7 +42,8 @@
     },
     "purple": {
         "dull": "#A0C",
-        "normal": "#A0F"
+        "normal": "#A0F",
+        "bright": "#97F"
     },
     "red": {
         "bright": "#F00",
