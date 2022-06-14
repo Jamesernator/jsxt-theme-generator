@@ -1,6 +1,6 @@
 import colors from "./colors.json" assert { type: "json" };
-import type { TokenStyle } from "./lib/TokenStyle.ts";
-import type { WorkbenchTheme } from "./lib/WorkbenchTheme.ts";
+import type { TokenStyle } from "./lib/TokenStyle.js";
+import type { WorkbenchTheme } from "./lib/WorkbenchTheme.js";
 
 /* eslint sort-keys: "error" */
 
@@ -176,6 +176,8 @@ export const semanticTokenColors: Record<string, TokenStyle> = {
     },
 };
 
+/* eslint sort-keys: "off" */
+
 export const workbench: Partial<WorkbenchTheme> = {
     "activityBar.activeBackground": colors.white.bright,
     "activityBar.activeBorder": colors.blue.bright,
@@ -195,21 +197,22 @@ export const workbench: Partial<WorkbenchTheme> = {
     "statusBar.foreground": colors.white.bright,
 
     "terminal.ansiBlack": colors.black.normal,
-    "terminal.ansiBlue": colors.blue.normal,
     "terminal.ansiBrightBlack": colors.black.bright,
+    "terminal.ansiBlue": colors.blue.normal,
     "terminal.ansiBrightBlue": colors.blue.bright,
-    "terminal.ansiBrightCyan": colors.cyan.bright,
-    "terminal.ansiBrightGreen": colors.green.bright,
-    "terminal.ansiBrightMagenta": colors.magenta.bright,
-    "terminal.ansiBrightRed": colors.red.bright,
-    "terminal.ansiBrightWhite": colors.white.bright,
-    "terminal.ansiBrightYellow": colors.yellow.bright,
     "terminal.ansiCyan": colors.cyan.normal,
+    "terminal.ansiBrightCyan": colors.cyan.bright,
     "terminal.ansiGreen": colors.green.normal,
+    "terminal.ansiBrightGreen": colors.green.bright,
     "terminal.ansiMagenta": colors.magenta.normal,
+    "terminal.ansiBrightMagenta": colors.magenta.bright,
     "terminal.ansiRed": colors.red.normal,
+    "terminal.ansiBrightRed": colors.red.bright,
     "terminal.ansiWhite": colors.white.normal,
+    "terminal.ansiBrightWhite": colors.white.bright,
     "terminal.ansiYellow": colors.yellow.normal,
+    "terminal.ansiBrightYellow": colors.yellow.bright,
+
     "terminal.background": colors.white.normal,
     "terminal.foreground": colors.black.dull,
     "terminalCursor.background": colors.black.dark,

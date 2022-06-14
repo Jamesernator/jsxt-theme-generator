@@ -1,8 +1,9 @@
-import { workbench, semanticTokenColors } from "./JSXTLightTheme.ts";
-import SemanticToken from "./lib/SemanticToken.ts";
-import type { TextmateTokenStyle } from "./lib/TextmateTokenStyle.ts";
-import type { TokenStyle } from "./lib/TokenStyle.ts";
-import toTextmateStyles from "./lib/toTextmateStyles.ts";
+import { writeFile } from "node:fs/promises";
+import { semanticTokenColors, workbench } from "./JSXTLightTheme.js";
+import SemanticToken from "./lib/SemanticToken.js";
+import type { TextmateTokenStyle } from "./lib/TextmateTokenStyle.js";
+import type { TokenStyle } from "./lib/TokenStyle.js";
+import toTextmateStyles from "./lib/toTextmateStyles.js";
 import tokenMap from "./tokenMap.json" assert { type: "json" };
 
 function findStyles(semanticToken: SemanticToken): TokenStyle | undefined {
@@ -51,4 +52,4 @@ const file = new URL(
     import.meta.url,
 );
 
-await Deno.writeTextFile(file, JSON.stringify(theme, null, 4));
+await writeFile(file, JSON.stringify(theme, null, 4));

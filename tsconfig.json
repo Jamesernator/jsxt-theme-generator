@@ -2,7 +2,8 @@
     "include": ["./src/**/*.ts"],
     "compilerOptions": {
         "target": "esnext",
-        "module": "esnext",
+        "module": "NodeNext",
+        "resolveJsonModule": true,
 
         "strict": true,
         "noImplicitAny": true,

@@ -1,8 +1,8 @@
-import assert from "./assert.ts";
+import assert from "./assert.js";
 
 type SemanticTokenOptions = {
-    modifiers?: ReadonlyArray<string> | undefined;
-    language?: string | null | undefined;
+    modifiers?: ReadonlyArray<string> | undefined,
+    language?: string | null | undefined,
 };
 
 export default class SemanticToken {
@@ -45,7 +45,7 @@ export default class SemanticToken {
         return this.#language;
     }
 
-    *subtokens(): Generator<SemanticToken> {
+    * subtokens(): Generator<SemanticToken> {
         for (const modifier of this.#modifiers) {
             const newModifiers = new Set(this.#modifiers);
             newModifiers.delete(modifier);
@@ -72,16 +72,16 @@ export default class SemanticToken {
     }
 
     isSubtoken(other: SemanticToken): boolean {
-        return this.#token === other.#token &&
-            other.#modifiers.every(
+        return this.#token === other.#token
+            && other.#modifiers.every(
                 (modifier) => this.#modifiers.includes(modifier),
-            ) &&
-            (other.#language === null || other.#language === this.#language);
+            )
+            && (other.#language === null || other.#language === this.#language);
     }
 
     toString(): string {
-        return this.#token +
-            this.#modifiers.map((modifier) => `.${modifier}`).join("") +
-            (this.#language === null ? "" : `:${this.#language}`);
+        return this.#token
+            + this.#modifiers.map((modifier) => `.${ modifier }`).join("")
+            + (this.#language === null ? "" : `:${ this.#language }`);
     }
 }

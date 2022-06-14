@@ -4,6 +4,9 @@
     "displayName": "jsxt-theme",
     "description": "",
     "version": "0.0.1",
+    "scripts": {
+        "build": "node --loader ts-node/esm ./src/generate.ts"
+    },
     "engines": {
         "vscode": "^1.60.0"
     },
@@ -20,9 +23,9 @@
         ]
     },
     "devDependencies": {
-        "@jamesernator/eslint-config": "^6.8.0",
-        "@types/node": "^16.10.2",
-        "tsm": "^2.1.2",
-        "typescript": "^4.5.0-beta"
+        "@jamesernator/eslint-config": "^7.33.0",
+        "@types/node": "^17.0.42",
+        "ts-node": "^10.8.1",
+        "typescript": "^4.7.3"
     }
 }

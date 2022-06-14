@@ -1,5 +1,5 @@
-import type { TextmateTokenStyle } from "./TextmateTokenStyle.ts";
-import type { TokenStyle } from "./TokenStyle.ts";
+import type { TextmateTokenStyle } from "./TextmateTokenStyle.js";
+import type { TokenStyle } from "./TokenStyle.js";
 
 export default function toTextmateStyles(
     tokenStyle: Readonly<TokenStyle>,
@@ -18,6 +18,7 @@ export default function toTextmateStyles(
     if (fontVariants.length > 0) {
         textmateTokenStyle.fontStyle = fontVariants.join(" ");
     }
+    // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
     if (tokenStyle.foreground) {
         textmateTokenStyle.foreground = tokenStyle.foreground;
     }

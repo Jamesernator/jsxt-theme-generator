@@ -1,4 +1,3 @@
-
 export type TokenStyle = {
     foreground?: string,
     bold?: boolean,
