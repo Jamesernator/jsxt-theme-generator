@@ -129,7 +129,7 @@ export const semanticTokenColors: Record<string, TokenStyle> = {
     },
     punctuation: {
         bold: true,
-        foreground: colors.black.bright,
+        foreground: theme.punctuation,
         underline: false,
     },
     regexp: {
