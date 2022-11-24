@@ -19,9 +19,9 @@
         "terminal.ansiBrightBlack": "#777",
         "terminal.ansiBlue": "#00F",
         "terminal.ansiBrightBlue": "#0AF",
-        "terminal.ansiCyan": "#0AA",
+        "terminal.ansiCyan": "#099",
         "terminal.ansiBrightCyan": "#0BB",
-        "terminal.ansiGreen": "#0A0",
+        "terminal.ansiGreen": "#090",
         "terminal.ansiBrightGreen": "#0B0",
         "terminal.ansiMagenta": "#C0C",
         "terminal.ansiBrightMagenta": "#F0F",
@@ -72,7 +72,7 @@
             "underline": true
         },
         "function": {
-            "foreground": "#0AA"
+            "foreground": "#099"
         },
         "function.declaration": {
             "underline": true
@@ -104,7 +104,7 @@
             "foreground": "#F88"
         },
         "method": {
-            "foreground": "#0AA"
+            "foreground": "#099"
         },
         "method.declaration": {
             "underline": true
@@ -263,20 +263,20 @@
         {
             "scope": "entity.name.function",
             "settings": {
-                "foreground": "#0AA"
+                "foreground": "#099"
             }
         },
         {
             "scope": "support.function",
             "settings": {
-                "foreground": "#0AA"
+                "foreground": "#099"
             }
         },
         {
             "scope": "meta.definition.function entity.name.function",
             "settings": {
                 "fontStyle": "underline",
-                "foreground": "#0AA"
+                "foreground": "#099"
             }
         },
         {
@@ -359,7 +359,7 @@
             "scope": "meta.method.declaration meta.definition.method entity.name.function",
             "settings": {
                 "fontStyle": "underline",
-                "foreground": "#0AA"
+                "foreground": "#099"
             }
         },
         {

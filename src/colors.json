@@ -14,7 +14,7 @@
     },
     "cyan": {
         "bright": "#0BB",
-        "normal": "#0AA"
+        "normal": "#099"
     },
     "gray": {
         "bright": "#CCC",
@@ -23,7 +23,7 @@
     },
     "green": {
         "bright": "#0B0",
-        "normal": "#0A0"
+        "normal": "#090"
     },
     "lilac": {
         "normal": "#77C"
