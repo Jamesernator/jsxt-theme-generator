@@ -98,10 +98,8 @@ exampleLabel: for (const o of [1, 2, 3]) {
     }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Foo {
     export class Bar {}
-    // eslint-disable-next-line no-debugger
     debugger;
     const o: Record<string, number> = { x: 10 };
     delete o.y;
@@ -148,7 +146,6 @@ export type ExampleType = {
 
 export const foo: ExampleType = { x: 10 };
 
-// eslint-disable-next-line no-bitwise
 export const bar = 1 >>> 3;
 
 if (!Math.random()) {
@@ -157,7 +154,6 @@ if (!Math.random()) {
 
 let y = 2;
 
-// eslint-disable-next-line no-plusplus
 y++;
 
 console.log(y);

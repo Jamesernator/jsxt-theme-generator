@@ -22,7 +22,7 @@
         "terminal.ansiCyan": "#0AA",
         "terminal.ansiBrightCyan": "#0CC",
         "terminal.ansiGreen": "#0A0",
-        "terminal.ansiBrightGreen": "#0C3",
+        "terminal.ansiBrightGreen": "#0B0",
         "terminal.ansiMagenta": "#C0C",
         "terminal.ansiBrightMagenta": "#F0F",
         "terminal.ansiRed": "#C00",
@@ -40,14 +40,14 @@
     "semanticHighlighting": true,
     "semanticTokenColors": {
         "attribute": {
-            "foreground": "#0C3"
+            "foreground": "#0B0"
         },
         "boolean": {
             "foreground": "#00F"
         },
         "class": {
             "bold": true,
-            "foreground": "#0C3"
+            "foreground": "#0B0"
         },
         "class.declaration": {
             "underline": true
@@ -60,7 +60,7 @@
         },
         "enum": {
             "bold": true,
-            "foreground": "#0C3"
+            "foreground": "#0B0"
         },
         "enum.declaration": {
             "underline": true
@@ -79,7 +79,7 @@
         },
         "interface": {
             "bold": true,
-            "foreground": "#0C3"
+            "foreground": "#0B0"
         },
         "interface.declaration": {
             "underline": true
@@ -111,7 +111,7 @@
         },
         "namespace": {
             "bold": true,
-            "foreground": "#0C3"
+            "foreground": "#0B0"
         },
         "namespace.declaration": {
             "underline": true
@@ -148,7 +148,7 @@
             "foreground": "#F80"
         },
         "regexp.characterClass": {
-            "foreground": "#0C3"
+            "foreground": "#0B0"
         },
         "string": {
             "foreground": "#F80"
@@ -165,7 +165,7 @@
         },
         "type": {
             "bold": true,
-            "foreground": "#0C3"
+            "foreground": "#0B0"
         },
         "type.declaration": {
             "underline": true
@@ -175,7 +175,7 @@
         },
         "typeParameter": {
             "bold": true,
-            "foreground": "#0C3"
+            "foreground": "#0B0"
         },
         "typeParameter.declaration": {
             "underline": true
@@ -191,7 +191,7 @@
         {
             "scope": "entity.other.attribute-name",
             "settings": {
-                "foreground": "#0C3"
+                "foreground": "#0B0"
             }
         },
         {
@@ -204,21 +204,21 @@
             "scope": "entity.name.type.class",
             "settings": {
                 "fontStyle": "bold",
-                "foreground": "#0C3"
+                "foreground": "#0B0"
             }
         },
         {
             "scope": "meta.class entity.other.inherited-class",
             "settings": {
                 "fontStyle": "bold",
-                "foreground": "#0C3"
+                "foreground": "#0B0"
             }
         },
         {
             "scope": "meta.class entity.name.type.class",
             "settings": {
                 "fontStyle": "bold underline",
-                "foreground": "#0C3"
+                "foreground": "#0B0"
             }
         },
         {
@@ -237,14 +237,14 @@
             "scope": "entity.name.type.enum",
             "settings": {
                 "fontStyle": "bold",
-                "foreground": "#0C3"
+                "foreground": "#0B0"
             }
         },
         {
             "scope": "meta.enum.declaration entity.name.type.enum",
             "settings": {
                 "fontStyle": "bold underline",
-                "foreground": "#0C3"
+                "foreground": "#0B0"
             }
         },
         {
@@ -283,21 +283,21 @@
             "scope": "entity.name.type.interface",
             "settings": {
                 "fontStyle": "bold",
-                "foreground": "#0C3"
+                "foreground": "#0B0"
             }
         },
         {
             "scope": "meta.interface entity.other.inherited-class",
             "settings": {
                 "fontStyle": "bold",
-                "foreground": "#0C3"
+                "foreground": "#0B0"
             }
         },
         {
             "scope": "meta.interface entity.name.type.interface",
             "settings": {
                 "fontStyle": "bold underline",
-                "foreground": "#0C3"
+                "foreground": "#0B0"
             }
         },
         {
@@ -366,14 +366,14 @@
             "scope": "entity.name.type.module",
             "settings": {
                 "fontStyle": "bold",
-                "foreground": "#0C3"
+                "foreground": "#0B0"
             }
         },
         {
             "scope": "meta.namespace.declaration entity.name.type.module",
             "settings": {
                 "fontStyle": "bold underline",
-                "foreground": "#0C3"
+                "foreground": "#0B0"
             }
         },
         {
@@ -512,13 +512,13 @@
         {
             "scope": "punctuation.definition.character-class.regexp",
             "settings": {
-                "foreground": "#0C3"
+                "foreground": "#0B0"
             }
         },
         {
             "scope": "constant.other.character-class.range.regexp",
             "settings": {
-                "foreground": "#0C3"
+                "foreground": "#0B0"
             }
         },
         {
@@ -568,21 +568,21 @@
             "scope": "entity.name.type",
             "settings": {
                 "fontStyle": "bold",
-                "foreground": "#0C3"
+                "foreground": "#0B0"
             }
         },
         {
             "scope": "support.type",
             "settings": {
                 "fontStyle": "bold",
-                "foreground": "#0C3"
+                "foreground": "#0B0"
             }
         },
         {
             "scope": "meta.type.declaration entity.name.type",
             "settings": {
                 "fontStyle": "bold underline",
-                "foreground": "#0C3"
+                "foreground": "#0B0"
             }
         },
         {

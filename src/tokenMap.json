@@ -19,6 +19,7 @@
     "constant.defaultLibrary": [
         "constant.language"
     ],
+    "decorator": [],
     "enum": [
         "entity.name.type.enum"
     ],
@@ -148,8 +149,6 @@
     "text": [
         "text"
     ],
-    "tomlArrayKey": [],
-    "tomlTableKey": [],
     "type": [
         "entity.name.type",
         "support.type"

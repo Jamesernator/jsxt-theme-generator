@@ -22,9 +22,7 @@
         "normal": "#AAA"
     },
     "green": {
-        "bright": "#0C3",
-        "medium": "#0B0",
-        "mediumBright": "#0C0",
+        "bright": "#0B0",
         "normal": "#0A0"
     },
     "lilac": {
@@ -32,7 +30,6 @@
     },
     "magenta": {
         "bright": "#F0F",
-        "medium": "#F0A",
         "normal": "#C0C"
     },
     "orange": {
