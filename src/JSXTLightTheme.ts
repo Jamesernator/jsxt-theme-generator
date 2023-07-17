@@ -184,7 +184,7 @@ export const workbench: Partial<WorkbenchTheme> = {
     "activityBar.background": colors.gray.bright,
     "activityBar.foreground": colors.black.dark,
 
-    "editor.background": colors.white.normal,
+    "editor.background": colors.white.bright,
     "editor.foreground": colors.black.dark,
 
     focusBorder: colors.gray.dull,
